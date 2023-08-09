@@ -1,0 +1,30 @@
+/* Header.css */
+
+/* Navbar background and text color */
+.navbar {
+	background-color: #333;
+}
+
+.navbar-brand {
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+}
+.navbar-brand:hover,
+.nav-link:hover {
+	color: #fff;
+}
+.navbar-brand.active,
+.nav-link.active {
+	color: #fff !important;
+}
+
+/* Nav links color */
+.nav-link {
+	color: #fff;
+}
+
+/* Active Nav link style */
+.nav-link.active {
+	color: #f00; /* Your desired active link color */
+}
