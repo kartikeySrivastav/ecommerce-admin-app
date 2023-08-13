@@ -15,19 +15,20 @@ function App() {
 
   useEffect(() => {
     if (!auth.authenticate) {
-      dispatch(isUserLoggedIn);
+      dispatch(isUserLoggedIn());
     }
   }, []);
+
   return (
     <div className="App">
       <Routes>
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
         <Route element={<PrivateRoutes />}>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
           </Route>
         </Route>
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </div>
   );
