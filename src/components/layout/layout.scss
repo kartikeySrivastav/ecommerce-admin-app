@@ -1,0 +1,13 @@
+.main-wrapper {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  .sidebar-wrappper {
+    width: 90px;
+    overflow: hidden;
+  }
+  .main-content {
+    padding: 20px;
+    transition: margin 0.3s ease;
+  }
+}

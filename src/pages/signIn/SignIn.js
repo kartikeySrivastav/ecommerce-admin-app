@@ -14,13 +14,6 @@ const SignIn = (props) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (auth.authenticate) {
-      // User is authenticated, navigate to the home page
-      navigate("/", { replace: true });
-    }
-  }, [auth.authenticate]);
-
   const userLogin = (e) => {
     e.preventDefault();
     const user = {
@@ -29,6 +22,12 @@ const SignIn = (props) => {
     };
     dispatch(login(user));
   };
+
+  useEffect(() => {
+    if (auth.authenticate) {
+      navigate("/");
+    }
+  }, []);
 
   return (
     <>
