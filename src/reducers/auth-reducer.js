@@ -8,7 +8,6 @@ const intialState = {
 };
 
 export default (state = intialState, action) => {
-  console.log("reducer action:", action);
   switch (action.type) {
     case authConstants.LOGIN_REQUEST:
       state = {
